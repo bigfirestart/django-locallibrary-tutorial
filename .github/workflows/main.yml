@@ -33,3 +33,11 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+  
+  tests:
+    name: Django tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Collect static
+        uses: actions/checkout@v2
+        run: python menage.py test
