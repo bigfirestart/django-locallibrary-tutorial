@@ -33,6 +33,3 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-  tests:
-     run: |
-          python ./manage.py test 
