@@ -40,6 +40,9 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-
+      
+      - name: Collect static
+        run: python manage.py collectstatic --noinput
+      
       - name: Test
         run: python manage.py test
